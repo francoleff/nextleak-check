@@ -1,0 +1,11 @@
+{
+  "name": "nextleak-check",
+  "version": "0.1.0",
+  "description": "Fails the build check when a server secret from your .env ends up in the Next.js browser build.",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "nextleak-check": "src/cli.js" },
+  "files": ["src/"],
+  "engines": { "node": ">=24" },
+  "scripts": { "test": "node --test test/check.test.js" }
+}

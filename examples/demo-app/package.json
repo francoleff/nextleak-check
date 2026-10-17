@@ -1,0 +1,6 @@
+{
+  "name": "nextleak-demo-app",
+  "private": true,
+  "scripts": { "build": "node scripts/plant.mjs && next build" },
+  "dependencies": { "next": "15.5.27", "react": "19.1.0", "react-dom": "19.1.0" }
+}
