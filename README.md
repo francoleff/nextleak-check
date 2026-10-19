@@ -52,7 +52,7 @@ Exit 2 means nothing was checked, so a missing build never passes silently.
 
 ## Config
 
-None. Version 0.1.0 has no flags and no config file.
+None. Version 0.1.0 reads no config file. Its only option is `--help`; see Usage.
 
 ## How it compares
 
@@ -85,7 +85,7 @@ Continuous integration runs `npm test` on Node 24 (`.github/workflows/ci.yml`).
 ## Limitations
 
 - Only `.next/static` and `out/` are read. Prerendered HTML under `.next/server` is not.
-- Only `.env*` files are read. Values set in the shell or in CI are not checked.
+- Only `.env`, `.env.local`, `.env.production` and `.env.production.local` are read. Values set in the shell or in CI are not checked.
 - A value stored under a `NEXT_PUBLIC_` name is treated as public, by design. A secret renamed with that prefix is not caught.
 - Values under 8 characters are skipped.
 - A composed value (`DB_URL=postgres://u:${DB_PASS}@h/db`) is caught through its parts: the expanded URL contains `DB_PASS`'s value. If every part is under 8 characters, the composed value is missed.
